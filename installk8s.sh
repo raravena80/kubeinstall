@@ -1,5 +1,6 @@
 #!/bin/bash
-
+#
+# Install script for gcp
 # Install Docker
 apt -y install \
     apt-transport-https \
