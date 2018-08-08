@@ -42,9 +42,7 @@ EXTERNAL_IP=$(curl -s -H "Metadata-Flavor: Google" \
   http://metadata.google.internal/computeMetadata/v1/instance/network-interfaces/0/access-configs/0/external-ip)
 INTERNAL_IP=$(curl -s -H "Metadata-Flavor: Google" \
   http://metadata.google.internal/computeMetadata/v1/instance/network-interfaces/0/ip)
-#KUBERNETES_VERSION=$(curl -s -H "Metadata-Flavor: Google" \
-#  http://metadata.google.internal/computeMetadata/v1/instance/attributes/kubernetes-version)
-#KUBERNETES_VERSION=1.11.1
+KUBERNETES_VERSION=1.11.1
 
 cat <<EOF > kubeadm.conf
 kind: MasterConfiguration
